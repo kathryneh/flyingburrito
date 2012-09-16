@@ -3,41 +3,38 @@
 /* CSS selector based on class, color */
 
 .user{
-  color: green;
-  float: right;
-  width: 100px;
-  
+  color:green;
+ float:right;
+  width: 100px;  
 }
 
 .main-nav{
   border-style:groove;
   border-width:5px;
-  margin:10px;
-  padding:0;
+  padding:10;
   list-style:none;
-  width:500px;
+  width:900px;
 }
 
 .main-nav li{
   display: inline;
-  padding:5px 0;
+  padding:10px 40;
   width:75px;
-  background:#485e49;
+  background:#0066CC;
   color:#eee;
   text-align:center;
   border-left:1px solid #fff;  
 }
 
 .main-nav li:hover{
-  background:#a2b3a1;
-  color:#000;
+  background:#0066FF;
+  color:#eee;
 }
 
 
 nav form{
- float:right; 
+ float:right;
 }
-
 
 
 /*CSS selector based on id, CSS font related attribute */
@@ -46,8 +43,42 @@ nav form{
   font-family: “Courier New”, Courier, “Lucida Sans Typewriter”, “Lucida Typewriter”, monospace;
 }
 
-/*CSS selector based on hierarchical relationship, padding */
-nav > form{
-  padding:5px;
+.groupActivity{
+  color:red;
+}
+
+.monitor{
+  border-style:groove;
+  position:relative;
+  left:500;
+  bottom:500;
+  height:150;
+  
+}
+
+.todonext{
+  border-style:groove;
+  position:relative;
+  left:500;
+  bottom:500;
+  height:150;
+}
+
+.recentlycompleted{
+  border-style:groove;
+  position:relative;
+  left:500;
+  bottom:500;
+  height:150;
+}
+
+.activityDate{
+  position:relative;
+  left:100;
+}
+
+.groupActivityEntry{
+  border-style:groove;
+  width:300px;
 }
 
