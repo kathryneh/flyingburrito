@@ -1,63 +1,129 @@
 /* Style for the flying burrito */
 
 /* CSS selector based on class, color */
+body{
+  font-family: "News Cycle", Helvetica, sans-serif;
+  font-size: 14px;
+  min-width:800px;
+}
+
+#pagetitle{
+  font-family: "News Cycle", Helvetica, sans-serif;
+  color:#3190ae;
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.logo{
+  float: left;
+  }
 
 .user{
-  color:green;
- float:right;
-  width: 100px;  
+  color:#3190ae;
+  width:150px;
+  float:right;
+}
+
+.user img{
+  float:right;
+}
+.username{
+  clear:both;
+}
+#statusForm{
+  float:right;
+  width:80%;
+}
+textarea[name="new_status"]{
+  min-width:300px;
+  width:100%;
+  min-height:100px;
+}
+input[type="submit"]{
+  display:none;
+}
+
+#username{
+  color:#3190ae;
+  font-size:30px;
+  float:left;
+  margin-top:40px;
+
 }
 
 .main-nav{
-  border-style:groove;
-  border-width:5px;
-  padding:10;
-  list-style:none;
-  width:900px;
+  clear:both;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:100%;
+  min-width:600px;
+  background-color:#3190AE;
+  -webkit-padding-start:0em;
+  z-index:2;
 }
 
 .main-nav li{
   display: inline;
-  padding:10px 40;
-  width:75px;
-  background:#0066CC;
+  padding-right:2.5%;
+  padding-left:2.5%;
+  padding-bottom:9px;
+  padding-top:2px;
+  background:#3190ae;
   color:#eee;
   text-align:center;
-  border-left:1px solid #fff;  
+  font-size:20px;
+  line-height:10px;
 }
 
-.main-nav li:hover{
-  background:#0066FF;
+.main-nav li:hover, .main-nav li:first-child{
+  background:#7FC4DC;
   color:#eee;
 }
+
 
 
 nav form{
  float:right;
+ margin-right:20px;
 }
 
 
 /*CSS selector based on id, CSS font related attribute */
-#h1{
-  color: blue;
+h1, h2{
+  color: #000;
   font-family: “Courier New”, Courier, “Lucida Sans Typewriter”, “Lucida Typewriter”, monospace;
+  font-weight:normal;
+  font-size:30px;
+  margin-top:0px;
+}
+h2{
+  font-size:25px;
+  margin-bottom: 0px;
+}
+
+h3{
+  font-size:20px;
+  text-align:center;
+}
+.monitor, .todonext, .recentlycompleted{
+  margin-bottom:10px;
 }
 
 .groupActivity{
   color:red;
+  height:330px;
+  overflow:scroll;
+  clear:both;
 }
 
 .monitor{
-  border-style:groove;
   position:relative;
   left:500;
   bottom:500;
-  height:150;
-  
+  height:150; 
 }
 
 .todonext{
-  border-style:groove;
   position:relative;
   left:500;
   bottom:500;
@@ -65,20 +131,87 @@ nav form{
 }
 
 .recentlycompleted{
-  border-style:groove;
   position:relative;
   left:500;
   bottom:500;
   height:150;
 }
-
+.activityUpdate{
+  border: 2px groove;
+  overflow:auto;
+  max-width:90%;
+  padding:10px;
+}
+.activityUpdate img{
+  float:left;
+}
 .activityDate{
   position:relative;
-  left:100;
+  width:425px;
+}
+.activityDate > p{
+  float:right;
+  margin-top:-2em;
+  margin-bottom:-2em;
+}
+.userbox{
+  max-width: 90px;
+  overflow:auto;
+}
+
+.activityCol{
+  float:left;
+  width:48%;
+}
+.statusCol{
+  float:right;
+  width:40%;
 }
 
 .groupActivityEntry{
-  border-style:groove;
-  width:300px;
+  border: 2px groove;
+  width:90%;
+  padding:10px;
+}
+#sidebar-1{
+  float:right;
+  width:5%;
+  background-color:#888;
+  min-height: 600px;
+  margin-top:-1em;
+  padding-bottom:1em;
+}
+#sidebar-2{
+  float:right;
+  width:5%;
+  background-color:#999;
+  min-height:600px;
+  margin-top:-1em;
+  margin-left:10px;
+  padding-bottom:1em;
+}
+input[type="search"]{
+  min-height:3em;
+  margin-top:-1em;
+}
+textarea{
+  min-height:150px;
+  min-width:300px;
+  width: 90%;
+}
+/*copied and pasted from interwebs*/
+.css-vertical-text {
+  writing-mode:tb-rl;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform: rotate(90deg);
+  white-space:nowrap;
+  display:block;
+  bottom:0;
+  width:20px;
+  height:20px;
+  font-size:24px;
+  font-weight:normal;
+  text-shadow: 0px 0px 1px #333;
 }
 

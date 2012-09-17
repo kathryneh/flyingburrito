@@ -14,11 +14,12 @@
 		<!--begin header area -->
 			<div class="header">
 				<div class="logo">
-					<img src="http://placekitten.com/240/80">
-				<div> 
+					<img src="images/logotiny.jpg">
+					<span id="pagetitle">theFlyingBurrito</span>
+				</div> 
 				<div class="user">
 					<img src="http://placekitten.com/80/80">
-					<span class="username"> yeti </span>
+					<span id="username"> yeti </div>
 				</div>
 			</div>
 		<!-- end header area -->
@@ -44,27 +45,37 @@
 		<div class="activityCol">
 			<h1 id = "h1"> activity </h1>
 			<div class = "activityUpdate">
-				<img src="http://placekitten.com/80/80">
-				<span class="username"> yeti </span>
-				<form>
-					<input type="text" name="new_status">
-					<input type="submit" value="">
-				</form>
+				<div id="statusFormWrapper">
+					<form id="statusForm">
+						<textarea name="new_status"></textarea>
+						<input type="submit" value="">
+					</form>
+				</div>
+				<div class="userbox">
+					<img src="http://placekitten.com/80/80">
+					<div class="username"> yeti </div>
+				</div>
 			</div>
 			<div class = "activityDate">
-				<h3> 9.12.2012 </h3>
+				<h3> &lt; 9.12.2012 &gt; </h3>
 				<p> jump to <input type="text" name="jumpdate"></p>
 			</div>
 			<div class = "groupActivity">
 				<div class = "groupActivityEntry">
-					<img src="http://placekitten.com/81/81">
-					<span class="username"> taxi </span>
+					<div class="userbox">
+					<img src="http://placekitten.com/80/80">
+					<div class="username"> yeti </div>
+				</div>
 					<p> Currently working on <a href="#">1079: Create a user rewards table</a></p>
 					<div class="nonblocker"> 
 						<p>No blockers to report.</p>
 					</div>
 				</div> 
 				<div class = "groupActivityEntry">
+					<div class="userbox">
+					<img src="http://placekitten.com/82/82">
+					<div class="username"> taxi </div>
+				</div>
 					<p> Currently working on <a href="#">1088: Write marketing email to inform users of rewards</a>.</p>
 					<div class="blocker">
 						Waiting on cost benefit analysis to move on to <a href="#"> 1089: Add more options for redemption than just burritos. </a> 
@@ -72,23 +83,27 @@
 				</div> 
 			</div>  
 		</div>
+		<div id="sidebar-1">
+		</div>
+		<div id="sidebar-2">
+		</div>
 		<div class="statusCol">
-			</div> 
 			<div class="monitor">
 				<h2> monitor </h2>
-				<div class="inputbox">
-				</div>
+				<textarea class="inputbox">
+				</textarea>
 			</div>
 			<div class="todonext">
 				<h2> to do next </h2>
-				<div class="inputbox">
-				</div>
+				<textarea class="inputbox">
+				</textarea>
 			</div>
 			<div class="recentlycompleted">
 				<h2> recently completed </h2>
-				<div class="inputbox">
-				</div>
+				<textarea class="inputbox">
+				</textarea>
 			</div>
+		</div> 
 		<!-- end  bulk of page -->
 		</div>
 	</body>
