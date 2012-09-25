@@ -7,11 +7,12 @@
 *
 */
 
-var User = function(first, last, role, imgLocation) {
+var User = function(userid, first, last, role, imgLocation) {
 	this.firstName = first;
 	this.lastName = last;
 	this.role = role;
 	this.picture = imgLocation;
+	this.userID = userid;
 
 	/*Each user will have a string array of the titles of their activities*/
 	this.activityLog = [];
@@ -32,9 +33,11 @@ User.prototype.updateImg = function(newImgLocation){
 
 User.prototype.addActivity() = function(item){
 	this.activityLog.push(item);
+	item.setOwner = this;
 }
 
 User.prototype.removeActivity() = function(item){
 	this.activityLog[this.getIndexOf(item)] = null;
+
 }
 

@@ -8,9 +8,10 @@ var Item = function(title, shortDescription, priority) {
 	this.shortDescription = shortDescription;
 	this.priority = priority;
 	this.owner = "unassigned";
+	this.sprint = "backlog";
 
-	/* Each work item will have a unique ID between 0-100 (placeholder) */
-	this.workID = Math.floor(Math.random()*101);
+	/* Each work item will have a unique id */ 
+	this.workID = this.workID++;
 
 }
 Item.prototype.getPriority = function() {
@@ -21,6 +22,14 @@ Item.prototype.getPriority = function() {
 
 Item.prototype.setPriority = function(newPriority) {
 	this.priority = newPriority;
+}
+
+Item.prototype.getSprint = function() {
+	return this.sprint;
+}
+
+Item.prototype.setPriority = function(newSprint) {
+	this.sprint = newSprint;
 }
 
 Item.prototype.getDescription = function() {
