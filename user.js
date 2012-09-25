@@ -7,10 +7,11 @@
 *
 */
 
-var User = function(first, last, role) {
-	this.first = first;
-	this.last = last;
+var User = function(first, last, role, imgLocation) {
+	this.firstName = first;
+	this.lastName = last;
 	this.role = role;
+	this.picture = imgLocation;
 
 	/*Each user will have a string array of the titles of their activities*/
 	this.activityLog = [];
@@ -20,13 +21,20 @@ User.prototype.getName = function(){
 	return this.first + " " + this.last;
 }
 
-User.prototype.createActivity() = function(){
-	
+User.prototype.updateRole = function(newRole){
+	this.role = newRole;
 }
 
-/*Will we need a fn like this to move activities to the different sections?*/
-User.prototype.moveActivity() = function(activity, destination){
-
+User.prototype.updateImg = function(newImgLocation){
+	this.imgLocation = newImgLocation;
 }
 
+
+User.prototype.addActivity() = function(item){
+	this.activityLog.push(item);
+}
+
+User.prototype.removeActivity() = function(item){
+	this.activityLog[this.getIndexOf(item)] = null;
+}
 
