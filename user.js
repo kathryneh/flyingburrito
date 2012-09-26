@@ -26,7 +26,7 @@ var User = function(first, last, username, role, imgLocation, permissions) {
 	this.role = role;
 	
 	//We will load image files into Image objects here
-	userImage = new Image();
+	this.userImage = new Image();
 	this.userImage.src = ""imgLocation"";
 	
 	//A string array of permissions will be set
