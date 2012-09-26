@@ -1,38 +1,56 @@
-/* Work Item
+/* Task
 *
 * Models independent work items that are a part of the project
 *
 */
-var Item = function(title, shortDescription, priority) {
+var Task = function(title, shortDescription, longDescription, priority) {
 	this.title = title;
 	this.shortDescription = shortDescription;
+	this.longDescription = longDescription;
 	this.priority = priority;
-	this.owner = "unassigned";
+	this.owner = [];
 
-	/* Each work item will have a unique ID between 0-100 (placeholder) */
+	// Each work Task will have a unique ID between 0-100 (placeholder) which will be checked against the database first
 	this.workID = Math.floor(Math.random()*101);
 
+	this.startDate = new Date();
 }
-Item.prototype.getPriority = function() {
+Task.prototype.getPriority = function() {
 	var result = "";
 	result += this.title;
 	return result;
 }
 
-Item.prototype.setPriority = function(newPriority) {
+Task.prototype.setPriority = function(newPriority) {
 	this.priority = newPriority;
 }
 
-Item.prototype.getDescription = function() {
+Task.prototype.getShortDescription = function() {
 	var result = "";
 	result += this.shortDescription;
 	return result;
 }
 
-Item.prototype.getOwner = function(){
+Task.prototype.getLongDescription = function() {
+	var result = "";
+	result += this.LongDescription;
+	return result;
+}
+
+Task.prototype.getOwner = function(){
 	return this.owner;
 }
 
-Item.prototype.setOwner = fuction(/*object*/ newOwner){
-	this.owner = newOwner;
+Task.prototype.setOwner = fuction(/*object*/ newOwner){
+	//If we choose to use an array of owners, we need to iterate through the array until we find an empty slot
+	for(int i = 0; i < this.owner.length; i++){
+		if(this.owner[i] == null) {
+			this.owner[i] = newOwner;
+			break;
+			}
+	}
+}
+
+Task.prototype.taskCompleted = function(){
+	this.endDate = new Date();
 }
