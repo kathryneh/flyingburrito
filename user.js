@@ -11,7 +11,6 @@ var User = function(first, last, username, role, imgLocation, permissions) {
 	this.firstName = first;
 	this.lastName = last;
 
-
 	//Check to see if database has username first, if not then set the given username
 	this.username = username;
 
@@ -20,7 +19,16 @@ var User = function(first, last, username, role, imgLocation, permissions) {
 	//We will load image files into Image objects here
 	userImage = new Image();
 	this.userImage.src = ""imgLocation"";
-
+	
+	//Check to see if database has username first, if not then set the given username
+	this.username = username;
+	
+	this.role = role;
+	
+	//We will load image files into Image objects here
+	userImage = new Image();
+	this.userImage.src = ""imgLocation"";
+	
 	//A string array of permissions will be set
 	this.permissions = permissions[];
 

@@ -2,7 +2,7 @@
 *
 * Models Day objects, which will each contain information about 
 * different Item objects that occurred during each specific Day
-*
+* Consider exactly what the Day objects mean.
 */
 
 var Day = function(date, items) {
