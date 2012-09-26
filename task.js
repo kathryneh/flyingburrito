@@ -54,3 +54,11 @@ Task.prototype.setOwner = fuction(/*object*/ newOwner){
 Task.prototype.taskCompleted = function(){
 	this.endDate = new Date();
 }
+
+Task.prototype.showComments = function(comment[]){
+	var result = "";
+	for(int i = 0; i < comment.length; i++){
+		if(comment[i].taskID == this.workID) result += comment[i];
+	}
+	return result;
+}
